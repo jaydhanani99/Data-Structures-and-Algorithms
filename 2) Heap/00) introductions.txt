@@ -1,0 +1,75 @@
+Identification of heap problem
+	1) K is given in problem statement
+	2) Either smallest/largest element we need to find
+	
+
+Two types of heaps
+	1) Min Heap (K + largest)
+	2) Max Heap (K + smallest)
+	
+Use case of K
+
+	1) If we do not use K complexity will be nlogn (quicksort/merge sort)\
+	2) If we use K complexity will be nlogk (so we are reducing complexity somehow using heap)
+	
+Heap Properties
+	1) Complete
+		=> We construct the heap from left to right across each row
+		=> of course the last row may not be full
+	2) In a binary heap every node has two children
+	3) Min Heap (O(1) access of smaller element)
+		=> The parent is always smaller than the values of the children
+	4) Max Heap (O(1) access of greater element)
+		=> The parent is always greater than the values of the children
+	
+Array representation of heap(e.g max heap)
+	100
+   /   \
+  19    36
+ /  \  /  \  
+17   3 25  1
+
+array representation will be [100, 19, 36, 17, 3, 25, 1]
+
+		 parent node
+			index
+		   /     \
+2*index + 1       2*index + 2
+left child          right child
+
+
+Time Complexity to build heap 
+	1) O(n/2)*O(log(n/2)) which is O(nlogn) in worst case and O(n) in running time.
+	Refer https://www.geeksforgeeks.org/time-complexity-of-building-a-heap/
+	2) O(logn) to heapify heap from ith index to end
+
+ 
+Deleting item from heap
+	1) To delete item from heap we swap that item with the last item of array representation of heap
+	2) After deleting item we reconstruct the heap if heap properties are viloated.
+	
+	Time Complexity = O(n){To find the element we would like to delete} 
+					  + O(logn){To reconstruct the heap for that element index to end of array} 
+					  = O(n)
+	If we remove root element the overall complexity will be O(logn) as we have root element at first index
+	
+Time complexity operation wise
+	1) To find minimum/maximum O(1)
+	2) Insert new item O(logn) To reconstruct the heap(we insert at last position and reconstruct the heap from their parent to root)
+	3) To delete element O(n) or O(logn)
+	
+Heap Sort
+	1) To sort the array we first create the max heap array from normal arary which takes O(n) or O(nlogn)
+	2) After constructing max heap array we replace the first element with the last element of heap array
+		So basically we are discarding the maximum element which is the first element of max heap
+	3) After discarding maximum element we reconstruct the heap which takes O(logn)
+		=> We do this operation for all the elements of the array
+		=> So overall time complexity will be O(n)*O(logn) = O(nlogn)
+	4) So overall time complexity of heap sort will be O(n) + O(nlogn) = O(nlogn)
+	
+	The worst case time complexity of quicksort/merge is O(n^2) whereas for heap it will be O(nlogn)
+	
+
+	
+
+

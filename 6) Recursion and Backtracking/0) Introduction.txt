@@ -1,0 +1,19 @@
+1) Make input smaller
+    => We are doing some decision, so input gets small automatically.
+2) Recrusion - Decision space
+    => We will have choices and we need to take decision to pick any choice
+    => To take decision we need to identify this problem is regarding recursion or not
+3) Recursive tree
+    => If we design recursion tree than code will be very easy
+4) 2 steps to solve any recursion
+    => Design the recursive tree
+    => Write the code
+
+5) Approach to solve the recursion problem
+    1) Recursion tree
+    2) Hypothesis, Induction, Base condition
+        1) Base condition => Smallest valid input from which we will stop recursive function call
+        2) Induction => Recursive function call
+        3) Hypothesis => Output the answer
+    3) Choice
+

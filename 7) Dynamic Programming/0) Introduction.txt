@@ -1,0 +1,25 @@
+=> Dynamic programming is based on the recursion itself, it's an enhanced recursion.
+=> It's based on the concept overlapping subproblmes, where we are not going to execute the recursive function which we have already executed.
+
+
+How to identify DP problem:
+    1) We have given choice (Just like in recursion whether to include this element or not), so based on choices we remove overlapping subproblems.
+    2) Asked Optimal (minimum, maximum)
+
+Approach to solve DP problems:
+
+    1) Think about recursive solution
+    2) Memoize the recursive solution, which is the alternative of the top-down approach
+    3) Apply top-down approach if you want to do iterative solution
+
+
+Top parent questions of dynamic programming with their approximate count of different problems:
+    1) 0-1 knapsack (6)
+    2) Unbounded knapsack (5)
+    3) Fibonacci (7)
+    4) LCS (15)
+    5) LIS (10)
+    6) Kadane's Algorithm (6)
+    7) Matrix chain multiplication (7)
+    8) DP on trees (4)
+    9) DP on grid (14)

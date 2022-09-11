@@ -1,0 +1,7 @@
+Identification of stack problem
+
+1) If brute force solution has O(n^2) time complexity and j loop is dependent on i
+    e.g for i in range(0, n)
+            for j in range(i, n)
+
+2) Question related to Array

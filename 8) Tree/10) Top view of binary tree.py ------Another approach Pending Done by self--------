@@ -1,0 +1,49 @@
+# https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1
+
+    def __init__(self):
+        self.output = []
+        self.max_level = -1
+    def traverseLeft(self, root, horizontal_level):
+        
+        if self.max_level < horizontal_level:
+            self.output.append(root.data)
+            self.max_level = horizontal_level
+            
+        if root.left:
+            self.traverseLeft(root.left, horizontal_level+1)
+        if root.right:
+            self.traverseLeft(root.right, horizontal_level-1)
+        
+    def traverseRight(self, root, horizontal_level):
+        
+        if self.max_level < horizontal_level:
+            self.output.append(root.data)
+            self.max_level = horizontal_level
+            
+        if root.right:
+            self.traverseRight(root.right, horizontal_level+1)
+        if root.left:
+            self.traverseRight(root.left, horizontal_level-1)
+        
+    #Function to return a list of nodes visible from the top view 
+    #from left to right in Binary Tree.
+    def topView(self, root):
+        if not root:
+            return root
+        
+        # First traverse on the left of root nodes
+        if root.left:
+            self.traverseLeft(root.left, 1)
+        
+        # Now we reverse the left nodes which would required for our answer
+        self.output.reverse()
+        
+        # Now we add the root node
+        self.output.append(root.data)
+        
+        # Now we traverse on the right nodes
+        self.max_level = -1
+        if root.right:
+            self.traverseRight(root.right, 1)
+            
+        return self.output

@@ -1,0 +1,18 @@
+If we learn how to solve 0-1 knapsack problem we can solve below knapsack related problems.
+
+1) Subset sum
+2) Equal sum partition
+3) Count of subset sum
+4) Minimum subset diff
+5) Target sum 
+6) Number of subset for given difference
+
+Types of knapsack
+
+1) 0-1 knapsack => Where we either add whole item to bag or not going to add the item
+2) Fractional knapsack => Where we add fraction of the items(e.g. add 2kg of fraction from 10kg item)
+3) Unbounded knapsack => Where we can add single item multiple times
+
+
+Identification of knapsack problem
+1) We have given items and maximum weight or maximum something else

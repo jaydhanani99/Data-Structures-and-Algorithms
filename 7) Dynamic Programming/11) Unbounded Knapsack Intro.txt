@@ -1,0 +1,9 @@
+=> In normal knapsack we have two choices either include item or not
+    => Once we include the item we are not including that item again in further recursive call
+=> However in unbounded knapsack we can include those items multiple times.
+
+Related problems:
+    1) Rod Cutting
+    2) Coin Change
+    3) Coin Change 2
+    4) Maximum Ribbon Cut

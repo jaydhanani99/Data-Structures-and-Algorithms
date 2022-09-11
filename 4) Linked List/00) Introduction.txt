@@ -1,0 +1,11 @@
+#Array vs Linked list
+    1)  Elements can be added to it indefinitely.
+            While an array will eventually get filled or have to be resized (a costly operation that isn't always possible). 
+    2)  Elements are also easily removed from a linked list.
+            Removing elements from an array leaves empty spaces that are a waste of computer memory
+    3)  Arrays which allow random access to the elements.
+            A link list only allows sequential access to its elements\
+    4)  Linked lists also use more storage space in a computer's memory as each node in the list contains both a data item and a reference to the next node.
+    5)  It follows that linked lists should be used for large lists of data where the total number of items in the list is changing. 
+            Arrays, on the other hand, are better suited to small lists, 
+            where the maximum number of items that could be on the list is known.

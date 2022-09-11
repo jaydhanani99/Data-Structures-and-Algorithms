@@ -1,0 +1,5 @@
+prims algorithm
+dijkastra algorithm
+
+https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/
+https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/

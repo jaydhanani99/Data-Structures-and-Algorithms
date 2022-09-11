@@ -1,0 +1,23 @@
+# https://www.geeksforgeeks.org/find-two-numbers-sum-xor/
+
+# Refer: https://stackoverflow.com/questions/36477623/given-an-xor-and-sum-of-two-numbers-how-to-find-the-number-of-pairs-that-satisf
+
+def compute(S, X):
+    # For the sum of two numbers you are adding the each bit of number (if we do not consider the carry)
+    # i.e for a = 010 and b = 111, bit sum would be (0+1)(1+1)(0+1) => 001 which is exactly the xor of a and b
+    # Now we also add the carry to this result to get the sum
+    # carry would be generated only when two bits are set that means AND of two bit is 1
+    # and carry would be added the previous bit i.e 01+11 => (0+1+1(carry))(1+1) => (1(carry)0)(0) => 100
+    # So we do the and operation and do shift left
+    # shift left of (a AND b)
+    # shift left can also be done by multiplying with 2
+    # so (a AND b)*2
+    # so we can say that a+b = (a^b){which is the actual sum of bits} + (a AND b)*2{which is the carry addition}
+
+
+
+
+# Driver function
+S = 17
+X = 13
+compute(S, X)
