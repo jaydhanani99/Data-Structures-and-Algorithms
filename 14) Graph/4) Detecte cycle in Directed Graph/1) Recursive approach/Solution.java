@@ -2,7 +2,7 @@
 // https://www.interviewbit.com/problems/cycle-in-directed-graph/
 // https://www.youtube.com/watch?v=GLxfoaZlRqs&t=11s&ab_channel=AnujBhaiya
 // https://www.geeksforgeeks.org/detect-cycle-in-a-graph/
-
+import java.util.*;
 public class Solution {
 
     ArrayList<ArrayList<Integer>> prepareGraph(int A, ArrayList<ArrayList<Integer>> B) {

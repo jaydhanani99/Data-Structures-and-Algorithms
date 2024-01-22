@@ -3,6 +3,19 @@
 
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
+        # Easy to understand approach
+        """
+            class Solution {
+                public int findDuplicate(int[] nums) {
+                    for (int i = 0; i < nums.length; i++) {
+                        int current = Math.abs(nums[i]);
+                        if (nums[current-1] < 0) return current;
+                        nums[current-1] = -nums[current-1];
+                    }
+                    return 0;
+                }
+            }
+        """
         # First approach is to use cycle detection, this would calculate in O(n) time and O(1) space
         # This would also work for particular elment is occure multiple times
         # Refer solution approach 3: Floyd's Tortoise and Hare (Cycle Detection) of https://leetcode.com/problems/find-the-duplicate-number
